@@ -1,7 +1,9 @@
-# DevOpsSchool KubectlAI
+# DevOps School Kubectl-AI
 
+## Prompts examples for Kubernetes yaml manifests
 
-| NAME             | PROMPT                                                           | DESCRIPTION                    | EXAMPLE                                   |
-|------------------|------------------------------------------------------------------|--------------------------------|-------------------------------------------|
-| name             | prompt                                                           | description                    | example link                              |
-| name             | prompt                                                           | description                    | example link                              |
+| NAME             | PROMPT                                                                               | DESCRIPTION              | EXAMPLE                     |
+|------------------|--------------------------------------------------------------------------------------|--------------------------|-----------------------------|
+| app.yaml         | create pod "app" based on image gcr.io/k8s-k3s/demo:v1.0.0 with named http port 8000 | create app.yaml          | example link                |
+| app.yaml         | add labels app, run with value demo                                                  | add labels to app.yaml   | example link                |
+| app.yaml         | create pod "app" based on image gcr.io/k8s-k3s/demo:v1.0.0 with named http port 8000 | create app.yaml          | example link                |
