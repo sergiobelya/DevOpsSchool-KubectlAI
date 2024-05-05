@@ -9,3 +9,4 @@
 | app-livenessProbe.yaml | create pod "app-livenessprob" for liveness prob for app with timeoutSeconds, failureThreshold | create pod app-livenessProbe | [app-livenessProbe.yaml](./yaml/app-livenessProbe.yaml) |
 | app-readinessProbe.yaml | create similar readiness probe with path /ready | create pod app-readinessProbe | [app-readinessProbe.yaml](./yaml/app-readinessProbe.yaml) |
 | app-volumeMounts.yaml | create pod for app named "app-volume" with liveness probes like in app-livenessprob, readiness probes, and volume "data" with mount path /data and host path /var/lib/app | create pod app-volumeMounts | [app-volumeMounts.yaml](./yaml/app-volumeMounts.yaml) |
+| app-cronjob.yaml | create CronJob scheduled every 5 minute and echo Hello world | create CronJob | [app-cronjob.yaml](./yaml/app-cronjob.yaml) |
