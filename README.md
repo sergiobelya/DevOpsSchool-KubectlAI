@@ -12,3 +12,4 @@
 | app-cronjob.yaml | create CronJob scheduled every 5 minute and echo Hello world | create CronJob | [app-cronjob.yaml](./yaml/app-cronjob.yaml) |
 | app-job.yaml | create Job "app-job-rsync" based on image google/cloud-sdk, command gsutil rsync, with volume mount path "/data/input" and pdName: glow-data-disk-200 | create rsync job | [app-job.yaml](./yaml/app-job.yaml) |
 | app-multicontainer.yaml | create pod "app-multi-containers" with 2 containers: nginx, debian, and shared volume html, and command in debian container that write date to end of /html/index.html every 1 second | create multi-container pod | [app-multicontainer.yaml](./yaml/app-multicontainer.yaml) |
+| app-resources.yaml | create pod "app-resource" based on gcr.io/kuar-demo/kuard-amd64:1, port 8080, with liveness probe /healthy, readiness probe /ready, requests resources cpu 100m, memory 128Mi and limits 256 Mi | create pod with resources limits | [app-resources.yaml](./yaml/app-resources.yaml) |
