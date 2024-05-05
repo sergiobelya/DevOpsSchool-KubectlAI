@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: app-job-rsync
+spec:
+  template:
+    spec:
+      containers:
+      - name: rsync-container
+        image: google/cloud-sdk
+        command: ["gsutil", "-m", "rsync", "-r", "/data/input", "gs://glow-data-disk-200"]
+        volumeMounts:
+        - name: data-volume
+          mountPath: /data/input
+      restartPolicy: Never
+      volumes:
+      - name: data-volume
+        gcePersistentDisk:
+          pdName: glow-data-disk-200
+          fsType: ext4
